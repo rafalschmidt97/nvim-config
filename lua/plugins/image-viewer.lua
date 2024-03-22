@@ -13,7 +13,7 @@ return {
       filesystem = {
         window = {
           mappings = {
-            ["<leader>p"] = "image_wezterm", -- " or another map
+            ["<leader>p"] = "image_wezterm",
           },
         },
         commands = {
@@ -37,7 +37,7 @@ return {
   -- },
   --
   -- {
-  --   -- https://github.com/nvim-telescope/telescope-media-files.nvim
+  --    -- https://github.com/nvim-telescope/telescope-media-files.nvim
   --   "nvim-telescope/telescope-media-files.nvim",
   --   dependencies = {
   --     "nvim-lua/popup.nvim",
@@ -53,14 +53,17 @@ return {
   --   "nvim-telescope/telescope.nvim",
   --   opts = {
   --     extensions = {
-  --       -- media = {
-  --       --   -- backend = "viu", -- image/gif backend
-  --       --   backend = "chafa",
-  --       -- },
-  --       media_files = {
-  --         filetypes = { "png", "jpg", "jpeg", "svg" },
-  --         find_cmd = "rg",
+  --       media = {
+  --         backend = "viu",
+  --         -- backend = "chafa/catimg"
+  --         -- backend = "ueberzug/ueberzugpp",
+  --         -- backend = "ueberzug",
+  --         -- backend = "jp2a",
   --       },
+  --       -- media_files = {
+  --       --   filetypes = { "png", "jpg", "jpeg", "svg" },
+  --       --   find_cmd = "rg",
+  --       -- },
   --     },
   --   },
   -- },
