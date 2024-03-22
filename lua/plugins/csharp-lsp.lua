@@ -1,5 +1,21 @@
 return {
   { import = "lazyvim.plugins.extras.lang.omnisharp" },
+  {
+    "stevearc/conform.nvim",
+    optional = true,
+    opts = {
+      formatters_by_ft = {
+        -- cs = { "csharpier" },
+        cs = {}, -- disable, strange
+      },
+      formatters = {
+        csharpier = {
+          command = "dotnet-csharpier",
+          args = { "--write-stdout" },
+        },
+      },
+    },
+  },
   -- {
   --   "nvim-treesitter/nvim-treesitter",
   --   opts = function(_, opts)
