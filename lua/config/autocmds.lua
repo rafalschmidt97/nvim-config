@@ -11,6 +11,22 @@ vim.api.nvim_create_autocmd({ "FileType" }, {
 })
 
 -- Overseer
+vim.api.nvim_create_user_command("OverseerRunScript", function()
+  local overseer = require("overseer")
+  overseer.run_template({ name = "run script" })
+end, {})
+
+vim.api.nvim_create_user_command("OverseerRunScriptToggle", function()
+  local overseer = require("overseer")
+  overseer.run_template({ name = "run script" }, function(task)
+    if task then
+      overseer.toggle()
+    else
+      vim.notify("Run not supported for filetype " .. vim.bo.filetype, vim.log.levels.ERROR)
+    end
+  end)
+end, {})
+
 vim.api.nvim_create_user_command("OverseerRunScriptOpenFloat", function()
   local overseer = require("overseer")
   overseer.run_template({ name = "run script" }, function(task)
@@ -20,27 +36,6 @@ vim.api.nvim_create_user_command("OverseerRunScriptOpenFloat", function()
       vim.notify("Run not supported for filetype " .. vim.bo.filetype, vim.log.levels.ERROR)
     end
   end)
-end, {})
-
-vim.api.nvim_create_user_command("OverseerRunScriptOpenHSplit", function()
-  local overseer = require("overseer")
-  overseer.run_template({ name = "run script" }, function(task)
-    if task then
-      overseer.run_action(task, "open hsplit")
-    else
-      vim.notify("Run not supported for filetype " .. vim.bo.filetype, vim.log.levels.ERROR)
-    end
-  end)
-end, {})
-
-vim.api.nvim_create_user_command("OverseerOpenFloat", function()
-  local overseer = require("overseer")
-  overseer.run_action("open float")
-end, {})
-
-vim.api.nvim_create_user_command("OverseerRunScript", function()
-  local overseer = require("overseer")
-  overseer.run_template({ name = "run script" })
 end, {})
 
 vim.api.nvim_create_user_command("OverseerRunScriptWatchVSplit", function()

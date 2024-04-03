@@ -14,8 +14,11 @@ vim.keymap.set(
   "<cmd>OverseerRunScriptOpenHSplit<cr>",
   { desc = "Overseer Run Script and Open HSplit" }
 )
-vim.keymap.set("n", "<leader>of", "<cmd>OverseerOpenFloat<cr>", { desc = "Overseer Open Float" })
 vim.keymap.set("n", "<leader>or", "<cmd>OverseerRun<cr>", { desc = "Overseer Run" })
-vim.keymap.set("n", "<leader>oq", "<cmd>OverseerQuickActioncr>", { desc = "Overseer Quick Action" })
+vim.keymap.set("n", "<leader>oq", "<cmd>OverseerQuickAction<cr>", { desc = "Overseer Quick Action" })
 vim.keymap.set("n", "<leader>ot", "<cmd>OverseerToggle<cr>", { desc = "Overseer Toggle" })
 vim.keymap.set("n", "<leader>oc", "<cmd>OverseerClose<cr>", { desc = "Overseer Close" })
+
+vim.keymap.set("n", "<leader>os", "<cmd>OverseerRunScript<cr>", { desc = "Overseer Run Script" })
+vim.keymap.set("n", "<leader>oo", "<cmd>OverseerRunScriptToggle<cr>", { desc = "Overseer Run Script Toggle" })
+vim.keymap.set("n", "<leader>of", "<cmd>OverseerRunScriptOpenFloat<cr>", { desc = "Overseer Run Script Open Float" })
