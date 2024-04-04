@@ -10,4 +10,5 @@ vim.keymap.set("n", "<leader>oc", "<cmd>OverseerClose<cr>", { desc = "Overseer C
 vim.keymap.set("n", "<leader>oo", "<cmd>OverseerRestartLast<cr>", { desc = "Overseer Restart Last" })
 vim.keymap.set("n", "<leader>oss", "<cmd>OverseerRunScript<cr>", { desc = "Overseer Run Script" })
 vim.keymap.set("n", "<leader>ost", "<cmd>OverseerRunScriptToggle<cr>", { desc = "Overseer Run Script Toggle" })
+vim.keymap.set("n", "<leader>osr", "<cmd>OverseerRestartLasttoggle<cr>", { desc = "Overseer Restart Last Toggle" })
 vim.keymap.set("n", "<leader>osf", "<cmd>OverseerRunScriptOpenFloat<cr>", { desc = "Overseer Run Script Open Float" })
