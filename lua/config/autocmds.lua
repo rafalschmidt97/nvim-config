@@ -47,7 +47,17 @@ vim.api.nvim_create_user_command("OverseerRunScriptWatchVSplit", function()
       overseer.run_action(task, "open vsplit")
       vim.api.nvim_set_current_win(main_win)
     else
-      vim.notify("WatchRun not supported for filetype " .. vim.bo.filetype, vim.log.levels.ERROR)
+      vim.notify("WaRun not supported for filetype " .. vim.bo.filetype, vim.log.levels.ERROR)
     end
   end)
+end, {})
+
+vim.api.nvim_create_user_command("OverseerRestartLast", function()
+  local overseer = require("overseer")
+  local tasks = overseer.list_tasks({ recent_first = true })
+  if vim.tbl_isempty(tasks) then
+    vim.notify("No tasks found", vim.log.levels.WARN)
+  else
+    overseer.run_action(tasks[1], "restart")
+  end
 end, {})
