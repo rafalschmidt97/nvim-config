@@ -10,6 +10,7 @@ return {
       },
     },
   },
+
   {
     "folke/which-key.nvim",
     opts = function(_, opts)
@@ -18,5 +19,11 @@ return {
         opts.defaults["<leader>os"] = { name = "+run script" }
       end
     end,
+    -- opts = {
+    --   defaults = {
+    --     ["<leader>o"] = { name = "+overseer" },
+    --     ["<leader>os"] = { name = "+run script" }
+    --   },
+    -- },
   },
 }
