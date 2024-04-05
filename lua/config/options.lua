@@ -7,3 +7,6 @@ local opt = vim.opt
 -- opt.tabstop = 4 -- Number of spaces tabs count for, 4 for golang
 -- opt.shiftwidth = 4 -- Size of an indent
 -- opt.expandtab = false -- Use spaces instead of tabs
+
+-- opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
+opt.conceallevel = 0
