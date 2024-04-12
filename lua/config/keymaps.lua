@@ -12,3 +12,7 @@ vim.keymap.set("n", "<leader>oss", "<cmd>OverseerRunScript<cr>", { desc = "Overs
 vim.keymap.set("n", "<leader>ost", "<cmd>OverseerRunScriptToggle<cr>", { desc = "Overseer Run Script Toggle" })
 vim.keymap.set("n", "<leader>osr", "<cmd>OverseerRestartLasttoggle<cr>", { desc = "Overseer Restart Last Toggle" })
 vim.keymap.set("n", "<leader>osf", "<cmd>OverseerRunScriptOpenFloat<cr>", { desc = "Overseer Run Script Open Float" })
+
+vim.keymap.set({ "n", "x" }, "<leader>s/", function()
+  require("ssr").open()
+end)
