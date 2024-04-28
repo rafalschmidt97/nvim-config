@@ -17,6 +17,31 @@ return {
     },
   },
   -- {
+  --   "nvim-neotest/neotest",
+  --   dependencies = {
+  --     "Issafalcon/neotest-dotnet",
+  --   },
+  --   opts = function(_, opts)
+  --     vim.list_extend(opts.adapters, {
+  --       require("neotest-dotnet"),
+  --     })
+  --   end,
+  -- },
+  {
+    "nvim-neotest/neotest",
+    optional = true,
+    dependencies = {
+      "Issafalcon/neotest-dotnet",
+    },
+    opts = {
+      adapters = {
+        ["neotest-dotnet"] = {
+          -- Here we can set options for neotest-dotnet
+        },
+      },
+    },
+  },
+  -- {
   --   "nvim-treesitter/nvim-treesitter",
   --   opts = function(_, opts)
   --     vim.list_extend(opts.ensure_installed, {
