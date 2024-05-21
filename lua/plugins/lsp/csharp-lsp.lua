@@ -8,14 +8,14 @@ return {
     end,
   },
   -- { "Decodetalkers/csharpls-extended-lsp.nvim", lazy = true }, TODO: does not work
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = function(_, opts)
-      if type(opts.ensure_installed) == "table" then
-        vim.list_extend(opts.ensure_installed, { "c_sharp" })
-      end
-    end,
-  },
+  -- {
+  --   "nvim-treesitter/nvim-treesitter",
+  --   opts = function(_, opts)
+  --     if type(opts.ensure_installed) == "table" then
+  --       vim.list_extend(opts.ensure_installed, { "c_sharp" })
+  --     end
+  --   end,
+  -- },
   -- https://www.reddit.com/r/neovim/comments/1agwrqa/how_to_extend_masons_automatic_server/
   {
     "neovim/nvim-lspconfig",
