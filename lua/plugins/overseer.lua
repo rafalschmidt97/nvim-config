@@ -11,19 +11,19 @@ return {
     },
   },
 
-  {
-    "folke/which-key.nvim",
-    opts = function(_, opts)
-      if LazyVim.has("overseer.nvim") then
-        opts.defaults["<leader>o"] = { name = "+overseer" }
-        opts.defaults["<leader>os"] = { name = "+run script" }
-      end
-    end,
-    -- opts = {
-    --   defaults = {
-    --     ["<leader>o"] = { name = "+overseer" },
-    --     ["<leader>os"] = { name = "+run script" }
-    --   },
-    -- },
-  },
+  -- { depricated api for default
+  --   "folke/which-key.nvim",
+  --   opts = function(_, opts)
+  --     if LazyVim.has("overseer.nvim") then
+  --       opts.defaults["<leader>o"] = { name = "+overseer" }
+  --       opts.defaults["<leader>os"] = { name = "+run script" }
+  --     end
+  --   end,
+  --   -- opts = {
+  --   --   defaults = {
+  --   --     ["<leader>o"] = { name = "+overseer" },
+  --   --     ["<leader>os"] = { name = "+run script" }
+  --   --   },
+  --   -- },
+  -- },
 }
