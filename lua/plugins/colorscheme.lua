@@ -8,6 +8,14 @@ return {
   },
 
   {
+    "maxmx03/solarized.nvim",
+  },
+
+  {
+    "ellisonleao/gruvbox.nvim",
+  },
+
+  {
     "LazyVim/LazyVim",
     opts = {
       -- colorscheme = "gruvbox",
