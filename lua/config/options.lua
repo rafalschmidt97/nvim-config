@@ -11,7 +11,13 @@ local opt = vim.opt
 -- opt.conceallevel = 2 -- Hide * markup for bold and italic, but not markers with substitutions
 opt.conceallevel = 0
 
--- If you want your clipboard to remain unchanged when replacing text, you can enable system clipboard:
 opt.clipboard = "unnamedplus" -- Sync with system clipboard
--- vnoremap p "0p -- 0 stores the last yanked text even after deleting:
-vim.keymap.set("v", "p", '"_dP', { noremap = true, silent = true }) -- black hole register discards deleted text
+-- Prevent overwriting the unnamed register (") when replacing selected text:
+-- xnoremap p "_dP
+vim.api.nvim_set_keymap("x", "p", '"_dP', { noremap = true, silent = true })
+-- Always paste from the yank register ("0) to keep the last yanked content intact:
+-- xnoremap p "0p
+-- vim.api.nvim_set_keymap("x", "p", '"0p', { noremap = true, silent = true })
+-- local map = vim.keymap.set
+-- map("x", "p", '"_dP<Plug>(YankyPutAfter)', { noremap = false, silent = true })
+-- map("x", "P", '"_dP<Plug>(YankyPutBefore)', { noremap = false, silent = true })
