@@ -1,5 +1,4 @@
 return {
-  { import = "lazyvim.plugins.extras.formatting.prettier" },
   {
     "stevearc/conform.nvim",
     optional = true,
